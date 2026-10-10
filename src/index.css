@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+/* Ranglar CSS o'zgaruvchilarda: tizim qorong'i rejimda bo'lsa, faqat qiymatlar almashadi */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-done: var(--done);
+  --color-done-soft: var(--done-soft);
+  --color-brk: var(--brk);
+  --color-brk-soft: var(--brk-soft);
+  --color-danger: var(--danger);
+
+  --font-sans: 'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Unbounded', 'Golos Text', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+}
+
+:root {
+  --bg: #eef0f4;
+  --surface: #ffffff;
+  --fg: #1b2030;
+  --muted: #5f6679;
+  --line: #d6dae4;
+  --accent: #2747d6;
+  --accent-soft: #e3e8fc;
+  --on-accent: #ffffff;
+  --done: #1f8a5b;
+  --done-soft: #dff3e9;
+  --brk: #a86c12;
+  --brk-soft: #fbf0dc;
+  --danger: #c0392b;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11141c;
+    --surface: #1a1e29;
+    --fg: #e8eaf2;
+    --muted: #9aa1b5;
+    --line: #2b3142;
+    --accent: #7d93ff;
+    --accent-soft: #232c52;
+    --on-accent: #0e1220;
+    --done: #4cc78f;
+    --done-soft: #17352a;
+    --brk: #e0a54a;
+    --brk-soft: #3a2d16;
+    --danger: #ff7b6b;
+    color-scheme: dark;
+  }
+}
+
+body {
+  @apply bg-bg font-sans text-[15px] leading-normal text-fg antialiased;
+}
